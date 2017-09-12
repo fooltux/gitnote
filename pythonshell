@@ -1,6 +1,0 @@
-python环境下出现了这样的一个问题：
-
-LookupError: unknown encoding: cp65001
-
-
-chcp 936
