@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from time import ctime
 import threading
 import progressbar
+import psycopg2
 
 site="http://ftop.ru"
 localdir="/Volumes/exFAT/ftop.py/"
@@ -61,6 +62,11 @@ def dealpage(url):
 
     #imginfohtml=soup.find("div",attrs={"class":"col-md-4 col-sm-6"}).find("a").get("href")
     #miniimgurl=soup.find("div",attrs={"class":"col-md-4 col-sm-6"}).find("img").get("src")
+
+def db_init():
+    cxn=psycopg.connect(user='tux')
+    cur = conn.cursor()
+    cur.execute()
 
 if __name__ == "__main__":
 #    link_crawler(url, delay=0, num_retries=1, user_agent='BadCrawler')
